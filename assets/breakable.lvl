@@ -1,0 +1,28 @@
+end
+
+# wall solid
+_ blank solid
+@ blank enter
+> blank exit
+^ spikes hurts
+X groundwall solid,destroyable
+~ whirlpool pushup
+
+####################
+_                  >
+_          #########
+_                   
+_       ~           
+_                   
+_#####    ~         
+_@   #              
+_##XX#              
+_         X ~       
+_         X        
+_         X      ~  
+_         X         
+_         X         
+_         X     ~   
+_   ~   ~ X         
+_         X  ~      
+^^^^^^^^^^^^^^^^^^^^

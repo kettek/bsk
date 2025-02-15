@@ -1,0 +1,26 @@
+bounce
+
+# wall solid
+_ blank solid
+@ blank enter
+> blank exit
+^ spikes hurts
+
+####################
+_                  >
+_                  >
+_                  >
+_                  >
+_@                 >
+_#                 >
+_                  >
+_                 ##
+_                   
+_                #  
+_     #       #     
+_        # #        
+_                   
+_                   
+_                   
+_                   
+^^^^^^^^^^^^^^^^^^^^

@@ -1,0 +1,28 @@
+ropes
+
+# wall solid
+. grass solid
+_ blank solid
+@ blank enter
+> blank exit
+^ tree foreground
+* cloud
+
+                    
+_                  >
+_                  >
+_  *               >
+_                  >
+_             *    >
+_                  >
+_      *           >
+_                  >
+_                  >
+_                  >
+_                  >
+_          #       >
+_                  >
+_                  >
+_          #       >
+_@  ^ # ^ ###  ^   >
+....................

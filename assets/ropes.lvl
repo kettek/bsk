@@ -1,0 +1,28 @@
+platforms
+
+# wall solid
+D wall_weak solid,destroyable
+| rope climbable
+@ blank enter
+> blank exit
+- blank solid
+^ spikes hurts
+
+####################
+-    ###    ###    >
+-     |      |     >
+-     |      |     >
+-     |      |     >
+-     |      |     >
+-     |      |  ####
+-     |      
+-                   
+-@       ##
+####
+ 
+ 
+ 
+ 
+ 
+ 
+^^^^^^^^^^^^^^^^^^^^

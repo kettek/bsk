@@ -1,0 +1,28 @@
+start
+
+# wall solid
+. grass solid
+_ blank solid
+1 birb solid
+2 kit solid
+^ tree foreground
+* cloud
+
+                    
+_  *               >
+_         *        >
+_                  >
+_           *      >
+_                  >
+_     *            >
+_                  >
+_                  >
+_    ^             >
+_   ^ ^21 ^   ^^  ^>
+....................
+_                  >
+_                  >
+_                  >
+_                  >
+_                  >
+                    

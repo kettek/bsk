@@ -1,0 +1,28 @@
+outro
+
+# wall solid
+@ blank enter
+. blank solid
+* cloud
+| rope climbable
+X groundwall solid,destroyable
+% bars solid,destroyable
+k kitl exit
+
+#        #         .
+#        #        *.
+#                  .
+#            *     .
+#                * .
+#             %%%%%.
+#             %   %.
+#             % k %.
+#            ######.
+#           #      .
+-@         #       .
+####################
+ 
+ 
+ 
+ 
+ 

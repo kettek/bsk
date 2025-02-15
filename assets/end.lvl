@@ -1,0 +1,29 @@
+fin
+
+# wall solid
+_ blank solid
+| rope climbable
+@ blank enter
+> blank exit
+^ spikes hurts
+X groundwall solid,destroyable
+~ whirlpool pushup
+
+####################
+_@                  
+## #########     #  
+#  | | |   #  ##### 
+#  | | |## #     #  
+#  |   | # #        
+#^^^^^^^^# #########
+#          #  |    #
+#          #  |  # #
+#          #  |  # #
+#  ~     ~ #  |  # #
+# ^^^^^^^^^#  |  # #
+# XXXXXXXXXX     # #
+# XXXX XXXX      # #
+#               ~# #
+#                # #
+# ~    ~    ~    # >
+#^^^^^^^^^^^^^^^^^^#
