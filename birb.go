@@ -25,7 +25,38 @@ func NewBirb() *Birb {
 }
 
 func (b *Birb) Update(s *StatePlay) Request {
-	if ebiten.IsKeyPressed(ebiten.KeyA) {
+	left := false
+	right := false
+	jump := false
+	shoot := false
+
+	if ids := ebiten.AppendGamepadIDs(nil); len(ids) > 0 {
+		left = ebiten.IsGamepadButtonPressed(ids[0], ebiten.GamepadButton(ebiten.StandardGamepadButtonLeftLeft))
+		right = ebiten.IsGamepadButtonPressed(ids[0], ebiten.GamepadButton(ebiten.StandardGamepadButtonLeftRight))
+		xa := ebiten.GamepadAxisValue(ids[0], ebiten.GamepadAxisType(ebiten.StandardGamepadAxisLeftStickHorizontal))
+		if xa < -0.5 {
+			left = true
+		}
+		if xa > 0.5 {
+			right = true
+		}
+		jump = ebiten.IsGamepadButtonPressed(ids[0], ebiten.GamepadButton(ebiten.StandardGamepadButtonRightBottom))
+		shoot = ebiten.IsGamepadButtonPressed(ids[0], ebiten.GamepadButton(ebiten.StandardGamepadButtonRightRight))
+	}
+	if ebiten.IsKeyPressed(ebiten.KeyA) || ebiten.IsKeyPressed(ebiten.KeyLeft) {
+		left = true
+	}
+	if ebiten.IsKeyPressed(ebiten.KeyD) || ebiten.IsKeyPressed(ebiten.KeyRight) {
+		right = true
+	}
+	if ebiten.IsKeyPressed(ebiten.KeyW) || ebiten.IsKeyPressed(ebiten.KeyUp) || ebiten.IsKeyPressed(ebiten.KeySpace) {
+		jump = true
+	}
+	if ebiten.IsKeyPressed(ebiten.KeyShift) {
+		shoot = true
+	}
+
+	if left {
 		if b.Jumping {
 			b.V.X -= 0.05
 		} else {
@@ -33,7 +64,7 @@ func (b *Birb) Update(s *StatePlay) Request {
 		}
 
 		b.FaceRight = false
-	} else if ebiten.IsKeyPressed(ebiten.KeyD) {
+	} else if right {
 		if b.Jumping {
 			b.V.X += 0.05
 		} else {
@@ -41,7 +72,7 @@ func (b *Birb) Update(s *StatePlay) Request {
 		}
 		b.FaceRight = true
 	}
-	if ebiten.IsKeyPressed(ebiten.KeySpace) {
+	if jump {
 		if b.JumpJuice > 0 {
 			b.JumpJuice--
 			b.V.Y -= 0.4
@@ -51,7 +82,7 @@ func (b *Birb) Update(s *StatePlay) Request {
 		}
 		b.Jumping = true
 	}
-	if ebiten.IsKeyPressed(ebiten.KeyShift) {
+	if shoot {
 		if b.FireJuice > 0 {
 			b.FireJuice = -20
 			if b.FaceRight {
