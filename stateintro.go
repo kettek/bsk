@@ -47,7 +47,7 @@ func (s *StateIntro) Update() State {
 			s.messages = s.messages[1:]
 			s.messageLife = 0
 			if len(s.messages) == 0 {
-				s.birdX = -16
+				s.birdX = -48
 			}
 		}
 		s.messageLife++
@@ -72,6 +72,7 @@ func (s *StateIntro) Update() State {
 
 func (s *StateIntro) Draw(screen *ebiten.Image) {
 	s.level.Draw(screen)
+	s.level.DrawForeground(screen)
 	if len(s.messages) > 0 {
 		ebitenutil.DebugPrintAt(screen, s.messages[0], 40, 60)
 	} else {
